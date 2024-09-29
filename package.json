@@ -1,0 +1,40 @@
+{
+  "name": "jom-coin",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "electron-builder",
+    "start": "electron . --no-sandbox"  
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "My cryptocurrency JomCoin",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "electron-builder": "^25.0.5"
+  },
+  "build": {
+    "appId": "com.bibizyana.JomCoin",
+    "productName": "JomCoin",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json"
+      ],
+      "win": {
+        "icon": "assets/icons/icon.ico"
+      },
+      "mac": {
+        "icon": "assets/icons/icon.icns"
+      },
+      "linux": {
+        "icon": "assets/icons/icon.png"
+      }
+  }
+}

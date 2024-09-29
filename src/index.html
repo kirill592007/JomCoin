@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JomCoin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div></div>
+        <h1 class="header_title">JomCoin</h1>
+        <menu class="menu">
+            <div class="dot"></div>
+        </menu>
+        <div class="menu_content first_window">
+            <div class="block_menu_text">
+                <p class="menu_text">Выбрать курсор</p>
+            </div>
+        </div>
+        <div class="menu_content select_cursor">
+            <div data-cursor="default" class="block_menu_text">
+                <p class="menu_text">Обычный(default)</p>
+            </div>
+            <div data-cursor="pointer" class="block_menu_text">
+                <p class="menu_text">Указатель(pointer)</p>
+            </div>
+            <div data-cursor="progress" class="block_menu_text">
+                <p class="menu_text">В прогрессе(progress)</p>
+            </div>
+            <div data-cursor="wait" class="block_menu_text">
+                <p class="menu_text">Загрузка(wait)</p>
+            </div>
+            <div data-cursor="cell" class="block_menu_text">
+                <p class="menu_text">Плюс(cell)</p>
+            </div>
+            <div data-cursor="crosshair" class="block_menu_text">
+                <p class="menu_text">Крест(crosshair)</p>
+            </div>
+            <div data-cursor="move" class="block_menu_text">
+                <p class="menu_text">Двигать(move)</p>
+            </div>
+            <div data-cursor="not-allowed" class="block_menu_text">
+                <p class="menu_text">Запрещено(not-allowed)</p>
+            </div>
+            <div data-cursor="grab" class="block_menu_text">
+                <p class="menu_text">Рука(grab)</p>
+            </div>
+            <div data-cursor="grabbing" class="block_menu_text">
+                <p class="menu_text">Кулак(grabbing)</p>
+            </div>
+            <div data-cursor="text" class="block_menu_text">
+                <p class="menu_text">Текст(text)</p>
+            </div>
+        </div>
+    </header>
+    <div class="home">     
+        <section class="main">
+            <div class="grid">
+                <div class="coin cursor"><p class="c">C</p></div>
+                <p class="speed"></p>
+                <p class="balance"></p>
+                <button class="btn upgrade_btn">Улучшения</button>
+            </div>
+        </section>
+        <div class="upgrade">
+            <div class="upgrade_content">
+                <h2 class="upgrade_title">Улучшения</h2>
+                <button class="btn btn_speed" data-price="100" data-upgrade-speed="1">+1/c. <br> Стоимость: 100</button>
+                <button class="btn btn_speed" data-price="1000" data-upgrade-speed="10">+10/c. <br> Стоимость: 1000</button>
+                <button class="btn btn_speed" data-price="10000" data-upgrade-speed="100">+100/c. <br> Стоимость: 10000</button>
+                <button class="btn btn_speed" data-price="100000" data-upgrade-speed="1000">+1000/c. <br> Стоимость: 100000</button>
+                <button class="btn btn_close">Закрыть</button>
+                <p class="error">Недостаточно денег</p>
+            </div>
+        </div>
+    </div>
+    <div class="missions">
+        <div class="missions_container">
+            <nav class="missions_nav">
+                <p class="missions_nav_text">№</p>
+                <p class="missions_nav_text">Задание</p>
+                <p class="missions_nav_text">Награда</p>
+                <p class="missions_nav_text click">Клики: 0</p>
+            </nav>
+            <div class="missions_content">
+                <ul class="missions_list"></ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div id="home_btn" class="footer_btn">
+            <div class="footer_img_home">
+                <div class="door"></div>
+            </div>
+            <p class="footer_text">Главная</p>
+        </div>
+        <div id="missions_btn" class="footer_btn">
+            <div class="footer_img_missions"></div>
+            <p class="footer_text">Миссии</p>
+        </div>
+    </footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
