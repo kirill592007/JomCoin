@@ -4,15 +4,16 @@
   "main": "src/main.js",
   "scripts": {
     "build": "electron-builder",
-    "start": "electron . --no-sandbox"  
+    "start": "electron . --no-sandbox"
   },
   "author": "",
   "license": "ISC",
   "description": "My cryptocurrency JomCoin",
   "dependencies": {
-    
+    "electron-updater": "^6.3.4"
   },
   "devDependencies": {
+    "electron": "^32.1.2",
     "electron-builder": "^25.0.5"
   },
   "build": {
@@ -21,20 +22,51 @@
     "directories": {
       "output": "dist"
     },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "kirill592007",
+        "repo": "JomCoin"
+      }
+    ],
     "files": [
       "src/**/*",
       "build/**/*",
       "node_modules/**/*",
       "package.json"
-      ],
-      "win": {
-        "icon": "assets/icons/icon.ico"
-      },
-      "mac": {
-        "icon": "assets/icons/icon.icns"
-      },
-      "linux": {
-        "icon": "assets/icons/icon.png"
+    ],
+    "extraResources": [
+      {
+        "from": "assets/",
+        "to": "assets/",
+        "filter": [
+          "**/*"
+        ]
       }
+    ],
+    "win": {
+      "icon": "assets/icons/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "icon": "assets/icons/icon.icns",
+      "target": [
+        "dmg"
+      ]
+    },
+    "linux": {
+      "icon": "assets/icons/icon.png",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
