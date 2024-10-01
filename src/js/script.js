@@ -71,35 +71,19 @@ $('#missions_btn').click(function (e) {
     $('.header_title').text('Миссии')
 })
 
-$.get("../db.json", function (data) {
-        data = data.missions
-        $.each(data, function (index, value) { 
-             $('.missions_list').append(`
-                <li class="mission">
-                    <pre class="mission_text">${value.id}.</pre>
-                    <pre class="mission_text">${value.missionText}</pre>
-                    <pre class="mission_text">${value.rewardText}</pre>
-                    <button data-id="${value.id}" class="btn missions_btn">Получить</button>
-                </li>
-             `)
-        });
-
-        $('.missions_btn').click(function (e) {
-            e.preventDefault();
-            let mission = data[$(this).data('id') - 1]
-            if (eval(mission.mission)) {
-                eval(mission.reward)
-                $('.speed').html('Мощность ' + speed + ' JOM/c.');
-                $(this).prop('disabled', true).addClass('missions_btn_complete')
-            } else {
-                $(this).addClass('missions_btn_error');
-                setTimeout(function(){
-                    $('.missions_btn').removeClass('missions_btn_error');
-                }, 3000)
-            }
-        });
+$('.missions_btn').click(function (e) {
+    e.preventDefault();
+    if (eval($(this).data('mission'))) {
+        eval(($(this).data('reward')))
+        $('.speed').html('Мощность ' + speed + ' JOM/c.');
+        $(this).prop('disabled', true).addClass('missions_btn_complete')
+    } else {
+        $(this).addClass('missions_btn_error');
+        setTimeout(function(){
+            $('.missions_btn').removeClass('missions_btn_error');
+        }, 3000)
     }
-);
+});
 
 $('.menu').click(function (e) { 
     e.preventDefault();
@@ -127,4 +111,3 @@ $('.select_cursor .block_menu_text').click(function (e) {
     $('*').css('cursor', $(this).data('cursor'))
     hide('.menu_content')
 });
-

@@ -9,8 +9,8 @@ const createWindow = () => {
     icon: path.join(__dirname, 'icon.ico'),
     webPreferences: {
       webSecurity: false,
-      nodeIntegration: true,
-      contextIsolation: false
+      nodeIntegration: false,
+      contextIsolation: true
     }
   });
   win.setMenuBarVisibility(false);

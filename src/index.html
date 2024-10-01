@@ -84,7 +84,50 @@
                 <p class="missions_nav_text click">Клики: 0</p>
             </nav>
             <div class="missions_content">
-                <ul class="missions_list"></ul>
+                <ul class="missions_list">
+                    <li class="mission">
+                        <p class="mission_text">1.</p>
+                        <p class="mission_text">Начальный<br>капитал</p>
+                        <p class="mission_text">+1000 JOM</p>
+                        <button data-mission="balance >= 0" data-reward="balance += 1000" class="btn missions_btn">Получить</button>
+                    </li>
+                    <li class="mission">
+                        <p class="mission_text">2.</p>
+                        <p class="mission_text">Накопи<br>10000 JOM</p>
+                        <p class="mission_text">+1000 JOM<br>+20 JOM/c.</p>
+                        <button data-mission="balance >= 10000" data-reward="balance += 1000; speed += 20" class="btn missions_btn">Получить</button>
+                    </li>
+                    <li class="mission">
+                        <p class="mission_text">3.</p>
+                        <p class="mission_text">Зарабатывай<br>100 JOM/c.</p>
+                        <p class="mission_text">+25 JOM/c.</p>
+                        <button data-mission="speed >= 100" data-reward="speed += 25" class="btn missions_btn">Получить</button>
+                    </li>
+                    <li class="mission">
+                        <p class="mission_text">4.</p>
+                        <p class="mission_text">Кликни на<br>койн 300 раз</p>
+                        <p class="mission_text">+10000 JOM</p>
+                        <button data-mission="click >= 300" data-reward="balance += 10000" class="btn missions_btn">Получить</button>
+                    </li>
+                    <li class="mission">
+                        <p class="mission_text">5.</p>
+                        <p class="mission_text">Накопи<br>20000 JOM"</p>
+                        <p class="mission_text">+2000 JOM<br>+20 JOM/c.</p>
+                        <button data-mission="balance >= 20000" data-reward="balance += 2000; speed += 20" class="btn missions_btn">Получить</button>
+                    </li>
+                    <li class="mission">
+                        <p class="mission_text">6.</p>
+                        <p class="mission_text">Зарабатывай<br>200 JOM/c.</p>
+                        <p class="mission_text">+50 JOM/c.</p>
+                        <button data-mission="speed >= 200" data-reward="speed += 50" class="btn missions_btn">Получить</button>
+                    </li>
+                    <li class="mission">
+                        <p class="mission_text">7.</p>
+                        <p class="mission_text">Кликни на<br>койн 600 раз</p>
+                        <p class="mission_text">+20000 JOM</p>
+                        <button data-mission="click >= 600" data-reward="balance += 20000" class="btn missions_btn">Получить</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -101,7 +144,6 @@
         </div>
     </footer>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="main.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
