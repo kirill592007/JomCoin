@@ -16,7 +16,7 @@ const createWindow = () => {
   win.setMenuBarVisibility(false);
   win.setTitle('JomCoin');
   win.loadFile('src/index.html');
-  autoUpdater.checkForUpdatesAndNotify()
+  autoUpdater.checkForUpdatesAndNotify();
 }
 
 autoUpdater.on('update-available', () => {

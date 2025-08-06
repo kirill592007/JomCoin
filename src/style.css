@@ -115,9 +115,9 @@ button{
 .grid{
     display: grid;
     justify-self: center;
-    row-gap: 50px;
+    row-gap: 35px;
 }
-.speed{
+.speed, .click{
     justify-self: center;
     font-size: 30px;
 }
@@ -135,6 +135,9 @@ button{
     color: #fff;
     transition: 0.3s;
     font-size: 18px;
+}
+.btn_upgrade{
+    width: 162px;
 }
 .btn:hover{
     background-color: #fff;
@@ -176,7 +179,7 @@ button{
 .error{
     display: none;
     position: absolute;
-    top: 26%;
+    top: 15%;
     left: 28%;
     color: #ff1100;
     font-size: 24px;
@@ -311,4 +314,15 @@ button{
     background-color: #67676b;
     border: #67676b;
     pointer-events: none;
+}
+.time{
+    position: absolute;
+    left: 0px;
+    width: 150px;
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
